@@ -1,5 +1,4 @@
 using StaticArrays
-using StaticArrays.ImmutableArrays
 using PyPlot
 export Polygon, isInside, isIntersect
 
@@ -9,7 +8,7 @@ const Vec4f = SVector{4, Float64}
 abstract type Polygonic end
 
 struct Polygon <: Polygonic
-    N::Int 
+    N::Int
     V::Vector{Vec2f}
     function Polygon(V_::AbstractVector) #V nust be counterclockwise
         N = length(V_)
@@ -120,4 +119,3 @@ function test()
     P = Rectangle([0.5 0.5], 1.0, 1.0)
     isInside(P, Vec2f([1.2, 0.8]))
 end
-

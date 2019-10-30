@@ -1,5 +1,4 @@
 using StaticArrays
-using StaticArrays.ImmutableArrays
 const Vec2f = SVector{2, Float64}
 const Vec4f = SVector{4, Float64}
 @inline @inbounds norm(v) = sqrt(v[1]^2 + v[2]^2)
